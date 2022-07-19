@@ -1,0 +1,32 @@
+﻿@model IAMCandidateTest.Models.ViewModels.VegetableViewModel
+
+<div>
+    <h4>@Model.Name Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EdiblePart)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EdiblePart)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsBotanicalFruit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsBotanicalFruit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoryType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryType)
+        </dd>
+    </dl>
+</div>

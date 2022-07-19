@@ -1,4 +1,5 @@
 using IAMCandidateTest.Data;
+using IAMCandidateTest.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,13 @@ builder.Services.AddDbContext<IAMCandidateTestDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
+builder.Services.AddScoped<IMineralRepository, MineralRepository>();
+builder.Services.AddScoped<IVegetableRepository, VegetableRepository>();
+
 
 var app = builder.Build();
 

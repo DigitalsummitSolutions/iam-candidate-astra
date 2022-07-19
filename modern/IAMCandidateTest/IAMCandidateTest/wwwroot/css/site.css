@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.table-product.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f3f8fa !important
+}
+
+.table-product td {
+    border-top: 0px solid #dee2e6 !important;
+    color: #728299 !important;
+}

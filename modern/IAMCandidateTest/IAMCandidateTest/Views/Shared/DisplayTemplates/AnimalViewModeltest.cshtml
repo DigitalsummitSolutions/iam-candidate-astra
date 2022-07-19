@@ -1,0 +1,51 @@
+﻿@using IAMCandidateTest.Models.ViewModels
+@model AnimalViewModel
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <h3>Animal Details</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-product">
+                <tbody>
+                    <tr>
+                        <td width="200">@Html.DisplayNameFor(x => x.Id)</td>
+                        <td>@Html.DisplayTextFor(x => x.Id)</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Leg Count</td>
+                        <td>@Model.LegCount</td>
+                    </tr>
+                    <tr>
+                        <td>Wing Count</td>
+                        <td>@Model.WingCount</td>
+                    </tr>
+                    <tr>
+                        <td>Can Fly</td>
+                        <td>@Model.CanFly</td>
+                    </tr>
+                    <tr>
+                        <td>Taxonomy</td>
+                        <td>
+                            <ul>
+                                <li>@Model.TaxClass</li>
+                                <li>@Model.TaxFamily</li>
+                                <li>@Model.TaxGenus</li>
+                                <li>@Model.TaxOrder</li>
+                                <li>@Model.TaxPhylum</li>
+                                <li>@Model.TaxSpecies</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

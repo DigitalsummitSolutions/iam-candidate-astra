@@ -32,7 +32,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Carnivora"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Felidae"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Felis"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Catus")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Catus"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -50,7 +51,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Psittaciformes"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Cacatuidae"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Nymphicus"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Hollandicus")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Hollandicus"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -68,7 +70,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Struthioniformes"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Struthionidae"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Struthio"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Camelus")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Camelus"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -87,7 +90,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Carnivora"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Caniformia"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Canis"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Familiaris")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Familiaris"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -105,7 +109,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Lepidoptera"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Nymphalidae"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Danaus"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Plexippus")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Plexippus"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -123,7 +128,8 @@ public static class CustomDataSeeder
                                 TaxOrder = dbContext.TaxOrders.Single(tc => tc.Name == "Squamata"),
                                 TaxFamily = dbContext.TaxFamilies.Single(tf => tf.Name == "Colubridae"),
                                 TaxGenus = dbContext.TaxGenuses.Single(tg => tg.Name == "Thamnophis"),
-                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Brachystoma")
+                                TaxSpecies = dbContext.TaxSpecies.Single(ts => ts.Name == "Brachystoma"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Animal")
                             });
                     }
 
@@ -143,7 +149,8 @@ public static class CustomDataSeeder
                                 Color = dbContext.MineralColors.Single(mc => mc.Name == "Dull Brown"),
                                 Streak = dbContext.Streaks.Single(s => s.Name == "Metallic copper red"),
                                 SpecificGravity = 8.90M,
-                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque")
+                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Mineral")
                             });
                     }
 
@@ -158,7 +165,8 @@ public static class CustomDataSeeder
                                 Color = dbContext.MineralColors.Single(mc => mc.Name == "Varied"),
                                 Streak = dbContext.Streaks.Single(s => s.Name == "None"),
                                 SpecificGravity = 3.40M,
-                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Transparent")
+                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Transparent"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Mineral")
                             });
                     }
 
@@ -173,7 +181,8 @@ public static class CustomDataSeeder
                                 Color = dbContext.MineralColors.Single(mc => mc.Name == "Golden, yellow"),
                                 Streak = dbContext.Streaks.Single(s => s.Name == "Golden, yellow"),
                                 SpecificGravity = 19.30M,
-                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque")
+                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Mineral")
                             });
                     }
 
@@ -188,7 +197,8 @@ public static class CustomDataSeeder
                                 Color = dbContext.MineralColors.Single(mc => mc.Name == "Reddish Brown"),
                                 Streak = dbContext.Streaks.Single(s => s.Name == "Red"),
                                 SpecificGravity = 5.00M,
-                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque")
+                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Opaque"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Mineral")
                             });
                     }
 
@@ -203,7 +213,8 @@ public static class CustomDataSeeder
                                 Color = dbContext.MineralColors.Single(mc => mc.Name == "Clear"),
                                 Streak = dbContext.Streaks.Single(s => s.Name == "Colorless"),
                                 SpecificGravity = 2.60M,
-                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Transparent")
+                                Diaphaneity = dbContext.Diaphaneities.Single(d => d.Name == "Transparent"),
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Mineral")
                             });
                     }
 
@@ -218,7 +229,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Beetroot",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Root"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -229,7 +241,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Bell pepper",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Fruit"),
-                                IsBotanicalFruit = true
+                                IsBotanicalFruit = true,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -240,7 +253,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Carrot",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Root"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -251,7 +265,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Lettuce",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Leaf"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -262,7 +277,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Lima bean",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Seed"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -273,7 +289,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Potato",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Tuber"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -284,7 +301,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Tomato",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Fruit"),
-                                IsBotanicalFruit = true
+                                IsBotanicalFruit = true,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 
@@ -295,7 +313,8 @@ public static class CustomDataSeeder
                             {
                                 Name = "Wheat",
                                 EdiblePart = dbContext.EdibleParts.Single(p => p.Name == "Seed"),
-                                IsBotanicalFruit = false
+                                IsBotanicalFruit = false,
+                                CategoryType = dbContext.CategoryTypes.Single(ct => ct.Name == "Vegetable")
                             });
                     }
 

@@ -1,5 +1,6 @@
 ﻿using IAMCandidateTest.Models;
 using Microsoft.EntityFrameworkCore;
+using IAMCandidateTest.Models.ViewModels;
 
 namespace IAMCandidateTest.Data
 {
@@ -37,7 +38,7 @@ namespace IAMCandidateTest.Data
                    new CategoryType
                    {
                        Id = 2,
-                       Name = "Minderal"
+                       Name = "Mineral"
                    },
                    new CategoryType
                    {
@@ -196,5 +197,11 @@ namespace IAMCandidateTest.Data
 
 
         }
+
+        public DbSet<IAMCandidateTest.Models.ViewModels.AnimalViewModel>? AnimalViewModel { get; set; }
+
+        public DbSet<IAMCandidateTest.Models.ViewModels.MineralViewModel>? MineralViewModel { get; set; }
+
+        public DbSet<IAMCandidateTest.Models.ViewModels.VegetableViewModel>? VegetableViewModel { get; set; }
     }
 }

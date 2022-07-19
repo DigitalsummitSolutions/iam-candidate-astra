@@ -1,7 +1,90 @@
-﻿
+﻿@using IAMCandidateTest.Models.Enums
+
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Category Details</h1>
 
+@using (Html.BeginForm("Index", "CategoryDetails", FormMethod.Get))
+{
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <div class="col-sm-2 form-group">
+                <div class="dropdown">
+                    @Html.DropDownList("CategoryType",
+                Html.GetEnumSelectList<CategoryTypeEnum>(),
+                "Select Category Type",new { @class = "form-control" })
+                </div>
+                <div class="col-sm-2 form-group">
+                    <br />
+                    @Html.DropDownList("Category",
+                new List<SelectListItem>() {new SelectListItem { Value = "0", Text = "Select Category..."}},
+                "Select Category",new { @class = "form-control", @style = "width:auto;" })
+                    <br />
+                    <div id="partialDetails" style="width:max-content">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $('#Category').hide();
+        });
+
+        $("#CategoryType").change(function() {
+            getCategoryListByCategoryType();
+            $('#partialDetails').hide();
+        });
+
+        $("#Category").change(function() {
+            if ($('#CategoryType').val() != 0 && $('#Category').val() != 0) {
+                LoadDetailsPartialView();
+                $('#partialDetails').show();
+            }
+            else
+                $('#partialDetails').hide();
+        });
+
+        var getCategoryListByCategoryType = function() {
+            $.ajax({
+                url: '@Url.Action("GetCategoryByCategoryType","CategoryDetails")',
+                type: 'GET',
+                data: {
+                    categoryType: $('#CategoryType').val(),
+                },
+                success: function(data) {
+                    $('#Category').find('option').remove()
+                    $(data).each(
+                        function(index, item) {
+                            $('#Category').append('<option value="' + item.id + '">' + item.name + '</option>')
+                        });
+                    $('#Category').append('<option value=0>Select Category</option>');
+                    $('#Category').val('0');
+                    $('#Category').show();
+
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                }
+            });
+        }
+
+        function LoadDetailsPartialView() {
+
+            // Home is your controller, Index is your action name
+            $("#partialDetails").load("@Url.Action("LoadDetailsViewDynamically","CategoryDetails")", { 'categoryTypeId': $('#CategoryType').val(), 'categoryId': $('#Category').val() },
+                function(response, status, xhr) {
+                    if (status == "error") {
+                        alert("An error occurred while loading the results.");
+                    }
+                });
+
+            $("#partialDetails").append('@Html.DisplayForModel()');
+        }
+    </script>
+}
